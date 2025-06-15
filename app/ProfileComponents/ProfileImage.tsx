@@ -18,7 +18,7 @@ export default function ProfileImage() {
 
   const fetchProfileImage = async () => {
     try {
-      const res = await axios.get(`https://triping-6.onrender.com/get-user-profile?uid=${uid}`);
+      const res = await axios.get(`https://tripping-new-app.onrender.com/get-user-profile?uid=${uid}`);
       setImage(res.data.profile_image);
     } catch (err) {
       console.log('Error fetching profile image:', err);
@@ -45,7 +45,7 @@ export default function ProfileImage() {
       formData.append('type', 'profile');
 
       try {
-        await axios.post('https://triping-6.onrender.com/upload-profile-image', formData, {
+        await axios.post('https://tripping-new-app.onrender.com/upload-profile-image', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
         setImage(selected.uri);

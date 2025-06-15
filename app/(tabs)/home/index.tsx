@@ -46,7 +46,7 @@ export default function HomeScreen() {
 
   const fetchNearbyUsers = async () => {
     try {
-      const res = await axios.get(`https://triping-6.onrender.com/get-nearby-users`, {
+      const res = await axios.get(`https://tripping-new-app.onrender.com/get-nearby-users`, {
         params: {
           latitude: location?.coords.latitude,
           longitude: location?.coords.longitude,

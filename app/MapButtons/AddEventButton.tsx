@@ -19,7 +19,7 @@ export default function AddEventButton() {
       async (title) => {
         if (!title) return;
         try {
-          await axios.post('https://triping-6.onrender.com/add-event', {
+          await axios.post('https://tripping-new-app.onrender.com/add-event', {
             title,
             latitude: location.coords.latitude,
             longitude: location.coords.longitude,

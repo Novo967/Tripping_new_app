@@ -14,7 +14,7 @@ export default function Bio() {
 
   const fetchBio = async () => {
     try {
-      const res = await axios.get(`https://triping-6.onrender.com/get-user-profile?uid=${uid}`);
+      const res = await axios.get(`https://tripping-new-app.onrender.com/get-user-profile?uid=${uid}`);
       if (res.data && res.data.bio) setBio(res.data.bio);
     } catch (err) {
       console.log('Error fetching bio:', err);
@@ -26,7 +26,7 @@ export default function Bio() {
   const handleBioChange = async (newBio: string) => {
     setBio(newBio);
     try {
-      await axios.post('https://triping-6.onrender.com/update-user-profile', {
+      await axios.post('https://tripping-new-app.onrender.com/update-user-profile', {
         uid,
         bio: newBio,
       });

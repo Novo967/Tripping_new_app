@@ -42,7 +42,7 @@ export default function RegisterScreen() {
       const longitude = location.coords.longitude;
 
       // שליחה ל־backend
-      await axios.post('https://triping-6.onrender.com/register-user', {
+      await axios.post('https://tripping-new-app.onrender.com/register-user', {
         uid,
         username,
         latitude,

@@ -23,7 +23,7 @@ export default function Gallery() {
 
   const fetchGallery = async () => {
     try {
-      const res = await axios.get(`https://triping-6.onrender.com/get-user-profile?uid=${uid}`);
+      const res = await axios.get(`https://tripping-new-app.onrender.com/get-user-profile?uid=${uid}`);
       setImages(res.data.gallery_images || []);
     } catch (err) {
       console.log('Error fetching gallery:', err);
@@ -51,7 +51,7 @@ export default function Gallery() {
       formData.append('type', 'gallery');
 
       try {
-        const res = await axios.post('https://triping-6.onrender.com/upload-profile-image', formData, {
+        const res = await axios.post('https://tripping-new-app.onrender.com/upload-profile-image', formData, {
           headers: { 'Content-Type': 'multipart/form-data' },
         });
 
