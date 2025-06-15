@@ -3,4 +3,4 @@ flask-cors
 SQLAlchemy
 psycopg2-binary
 python-dotenv
-gunicorn
+gunicorn==23.0.0
