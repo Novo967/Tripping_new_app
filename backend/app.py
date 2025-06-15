@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Database setup
-DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://localhost/trippingapp")
+DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://trippingnewdb_user:DT03VR0PxLtMWiEvfVSO3ucBcT15iMmr@dpg-d178dd15pdvs7382t61g-a.oregon-postgres.render.com/trippingnewdb")
 engine = create_engine(DATABASE_URL)
 Session = sessionmaker(bind=engine)
 Base.metadata.create_all(engine)
